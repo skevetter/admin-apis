@@ -1,0 +1,42 @@
+version: "3"
+
+tasks:
+  lint:
+    desc: Run golangci-lint for all packages
+    cmd: golangci-lint run {{ .CLI_ARGS }}
+
+  fmt:
+    desc: Run golangci-lint formatters
+    cmd: golangci-lint fmt {{ .CLI_ARGS }}
+
+  gen:
+    desc: Generate all Go related APIs and files
+    cmds:
+      - >-
+        go run k8s.io/code-generator/cmd/deepcopy-gen@v0.28.1
+        --go-header-file ./hack/boilerplate.go.txt
+        --input-dirs ./pkg/licenseapi
+        -O zz_generated.deepcopy
+      - go generate ./...
+      - >-
+        go run k8s.io/kube-openapi/cmd/openapi-gen@v0.0.0-20260127142750-a19766b6e2d4
+        --go-header-file ./hack/boilerplate.go.txt
+        --output-pkg github.com/loft-sh/admin-apis/pkg/licenseapi
+        --output-dir ./pkg/licenseapi
+        --output-file zz_generated.openapi.go
+        --output-model-name-file zz_generated.model_name.go
+        github.com/loft-sh/admin-apis/pkg/licenseapi
+
+  check:gen:
+    desc: Verify generated code is up to date
+    cmds:
+      - task: gen
+      - cmd: |
+          if [ -n "$(git diff)" ]; then
+            echo "go generate resulted in changed files. Run 'task gen' and commit the changes."
+            exit 1
+          fi
+
+  check:structalign:
+    desc: Check struct memory alignment and print potential improvements
+    cmd: go run github.com/dkorunic/betteralign/cmd/betteralign@latest {{ .CLI_ARGS }} ./...
