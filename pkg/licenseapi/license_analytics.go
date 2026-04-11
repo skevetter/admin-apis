@@ -1,7 +1,7 @@
 package licenseapi
 
 // Analytics is a struct that represents the analytics server and the requests that should be sent
-// to it. This information is sent to Loft instances when they check in with the license server.
+// to it. This information is sent to Devsy instances when they check in with the license server.
 // +k8s:openapi-gen=true
 // +k8s:deepcopy-gen=true
 type Analytics struct {

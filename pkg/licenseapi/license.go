@@ -1,11 +1,11 @@
 package licenseapi
 
-// License is a struct representing the license data sent to a Loft instance after checking in with
+// License is a struct representing the license data sent to a Devsy instance after checking in with
 // the license server.
 // +k8s:openapi-gen=true
 // +k8s:deepcopy-gen=true
 type License struct {
-	// InstanceID contains the instance id of the Loft instance
+	// InstanceID contains the instance id of the Devsy instance
 	InstanceID string `json:"instance,omitempty"`
 	// Entity holds a name for an organization, person or entity this product is licensed for. This will be displayed to the user.
 	Entity string `json:"entity,omitempty"`
@@ -17,11 +17,11 @@ type License struct {
 	// analytics server.
 	// +optional
 	Analytics *Analytics `json:"analytics,omitempty"`
-	// DomainToken holds the JWT with the URL that the Loft instance is publicly available on.
-	// (via Loft router)
+	// DomainToken holds the JWT with the URL that the Devsy instance is publicly available on.
+	// (via Devsy router)
 	// +optional
 	DomainToken string `json:"domainToken"`
-	// Buttons is a slice of license server endpoints (buttons) that the Loft instance may need to
+	// Buttons is a slice of license server endpoints (buttons) that the Devsy instance may need to
 	// hit. Each Button contains the display text and link for the front end to work with.
 	Buttons []*Button `json:"buttons,omitempty"`
 	// Announcements is a map string/string such that we can easily add any additional data without
