@@ -1,6 +1,6 @@
 package licenseapi
 
-// UsageData holds information for an instance deployment of vCluster Platform
+// UsageData holds information for an instance deployment of Devsy Platform
 // +k8s:openapi-gen=true
 // +k8s:deepcopy-gen=true
 type UsageData struct {
@@ -15,15 +15,15 @@ type UsageData struct {
 }
 
 // UsageDataDetails holds detailed information about the nodes and virtual cluster for an instance deployment of
-// vCluster Platform
+// Devsy Platform
 // +k8s:openapi-gen=true
 // +k8s:deepcopy-gen=true
 type UsageDataDetails struct {
 	// Nodes contains the details of the nodes
 	Nodes []NodeInfo `json:"nodes"`
 
-	// VClusters contains the details of the virtual clusters
-	VClusters []VirtualClusterInfo `json:"vClusters"`
+	// DevsyClusters contains the details of the virtual clusters
+	DevsyClusters []DevsyClusterInfo `json:"vClusters"`
 }
 
 // FeatureUsage holds information about whether a feature is used and its status
@@ -43,10 +43,10 @@ type NodeInfo struct {
 	Capacity          map[string]string `json:"capacity"`
 }
 
-// VirtualClusterInfo holds information about a single virtual cluster
+// DevsyClusterInfo holds information about a single virtual cluster
 // +k8s:openapi-gen=true
 // +k8s:deepcopy-gen=true
-type VirtualClusterInfo struct {
+type DevsyClusterInfo struct {
 	UID               string   `json:"uid"`
 	Name              string   `json:"name"`
 	Namespace         string   `json:"namespace"`

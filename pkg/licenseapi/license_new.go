@@ -20,7 +20,7 @@ func New() *License {
 		Modules: []*Module{
 			{
 				DisplayName: "All Features",
-				Name:        string(VirtualClusterModule),
+				Name:        string(DevsyModule),
 				Limits:      limits,
 				Features:    GetAllFeatures(),
 			},

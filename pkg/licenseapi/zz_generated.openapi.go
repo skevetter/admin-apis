@@ -50,7 +50,7 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 		Trial{}.OpenAPIModelName():                            schema_loft_sh_admin_apis_pkg_licenseapi_Trial(ref),
 		UsageData{}.OpenAPIModelName():                        schema_loft_sh_admin_apis_pkg_licenseapi_UsageData(ref),
 		UsageDataDetails{}.OpenAPIModelName():                 schema_loft_sh_admin_apis_pkg_licenseapi_UsageDataDetails(ref),
-		VirtualClusterInfo{}.OpenAPIModelName():               schema_loft_sh_admin_apis_pkg_licenseapi_VirtualClusterInfo(ref),
+		DevsyClusterInfo{}.OpenAPIModelName():               schema_loft_sh_admin_apis_pkg_licenseapi_DevsyClusterInfo(ref),
 	}
 }
 
@@ -540,7 +540,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_InstanceCreateInput(ref common.Ref
 					},
 					"product": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Product is the product that is being used. Can be empty, loft, devpod-pro or vcluster-pro. This should NOT be a ProductName but a string to allow for downward compatibility",
+							Description: "Product is the product that is being used. Can be empty, devsy, devpod-pro or devsy-pro. This should NOT be a ProductName but a string to allow for downward compatibility",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -1715,7 +1715,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_UsageData(ref common.ReferenceCall
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
-				Description: "UsageData holds information for an instance deployment of vCluster Platform",
+				Description: "UsageData holds information for an instance deployment of Devsy Platform",
 				Type:        []string{"object"},
 				Properties: map[string]spec.Schema{
 					"featureUsage": {
@@ -1768,7 +1768,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_UsageDataDetails(ref common.Refere
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
-				Description: "UsageDataDetails holds detailed information about the nodes and virtual cluster for an instance deployment of vCluster Platform",
+				Description: "UsageDataDetails holds detailed information about the nodes and virtual cluster for an instance deployment of Devsy Platform",
 				Type:        []string{"object"},
 				Properties: map[string]spec.Schema{
 					"nodes": {
@@ -1787,13 +1787,13 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_UsageDataDetails(ref common.Refere
 					},
 					"vClusters": {
 						SchemaProps: spec.SchemaProps{
-							Description: "VClusters contains the details of the virtual clusters",
+							Description: "DevsyClusters contains the details of the virtual clusters",
 							Type:        []string{"array"},
 							Items: &spec.SchemaOrArray{
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref(VirtualClusterInfo{}.OpenAPIModelName()),
+										Ref:     ref(DevsyClusterInfo{}.OpenAPIModelName()),
 									},
 								},
 							},
@@ -1804,15 +1804,15 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_UsageDataDetails(ref common.Refere
 			},
 		},
 		Dependencies: []string{
-			NodeInfo{}.OpenAPIModelName(), VirtualClusterInfo{}.OpenAPIModelName()},
+			NodeInfo{}.OpenAPIModelName(), DevsyClusterInfo{}.OpenAPIModelName()},
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_VirtualClusterInfo(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_loft_sh_admin_apis_pkg_licenseapi_DevsyClusterInfo(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
-				Description: "VirtualClusterInfo holds information about a single virtual cluster",
+				Description: "DevsyClusterInfo holds information about a single virtual cluster",
 				Type:        []string{"object"},
 				Properties: map[string]spec.Schema{
 					"uid": {

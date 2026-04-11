@@ -14,7 +14,7 @@ const (
 type InstanceCreateInput struct {
 	*InstanceTokenAuth `json:",inline" hash:"-"`
 
-	// Product is the product that is being used. Can be empty, devsy, devpod-pro or vcluster-pro.
+	// Product is the product that is being used. Can be empty, devsy, devpod-pro or devsy-pro.
 	// This should NOT be a ProductName but a string to allow for downward compatibility
 	Product string `json:"product,omitempty" form:"product"`
 

@@ -31,6 +31,12 @@ linters:
     - unparam
     - unused
     - whitespace
+  exclusions:
+    rules:
+      - path: "zz_generated\\..*\\.go"
+        linters: [lll, gosec, dupl, funlen, cyclop]
+      - path: "features\\.go"
+        linters: [lll, gosec]
   settings:
     cyclop:
       max-complexity: 8

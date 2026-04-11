@@ -18,23 +18,23 @@ const (
 
 	OIDCProvider FeatureName = "oidc-provider" // Platform as OIDC Provider
 
-	VirtualCluster FeatureName = "vclusters" // Virtual Cluster Management
+	DevsyClusters FeatureName = "devsy-clusters" // Virtual Cluster Management
 
-	VirtualClusterProDistroImage FeatureName = "vcp-distro-image" // Security-Hardened vCluster Image
+	DevsyDistroImage FeatureName = "devsy-distro-image" // Security-Hardened Devsy Image
 
-	VirtualClusterProDistroBuiltInCoreDNS FeatureName = "vcp-distro-built-in-coredns" // Built-In CoreDNS
+	DevsyDistroBuiltInCoreDNS FeatureName = "devsy-distro-built-in-coredns" // Built-In CoreDNS
 
 	PrivateNodesVpn FeatureName = "private-nodes-vpn" // Private Nodes VPN
 
-	VirtualClusterProDistroPrivateNodes FeatureName = "vcp-distro-private-nodes" // Private Nodes
+	DevsyDistroPrivateNodes FeatureName = "devsy-distro-private-nodes" // Private Nodes
 
 	PrivateNodesAutoNodes FeatureName = "private-nodes-auto-nodes" // Private Nodes Auto Nodes
 
 	Standalone FeatureName = "standalone" // Standalone
 
-	VirtualClusterProDistroEmbeddedEtcd FeatureName = "vcp-distro-embedded-etcd" // Embedded etcd
+	DevsyDistroEmbeddedEtcd FeatureName = "devsy-distro-embedded-etcd" // Embedded etcd
 
-	VirtualClusterProDistroExternalDatabase FeatureName = "vcp-distro-external-database" // External Database
+	DevsyDistroExternalDatabase FeatureName = "devsy-distro-external-database" // External Database
 
 	ExternalDatabaseRdsIam FeatureName = "external-database-rds-iam" // External Database RDS IAM Authentication
 
@@ -42,7 +42,7 @@ const (
 
 	ConnectorExternalDatabaseEksPodIdentity FeatureName = "connector-external-database-eks-pod-identity" // EKS Pod Identity for External Database Connections
 
-	VirtualClusterHostPathMapper FeatureName = "vcluster-host-path-mapper" // Central HostPath Mapper
+	DevsyHostPathMapper FeatureName = "devsy-host-path-mapper" // Central HostPath Mapper
 
 	SyncNamespacesTohost FeatureName = "sync-namespaces-tohost" // Sync Namespaces toHost
 
@@ -50,7 +50,7 @@ const (
 
 	HybridScheduling FeatureName = "hybrid-scheduling" // Hybrid Scheduling
 
-	VirtualClusterProxyResources FeatureName = "vcluster-proxy-resources" // vCluster Proxy Resources
+	DevsyProxyResources FeatureName = "devsy-proxy-resources" // Devsy Proxy Resources
 
 	DraSync FeatureName = "dra-sync" // DRA Sync
 
@@ -82,9 +82,9 @@ const (
 
 	MultipleSSOProviders FeatureName = "multiple-sso-providers" // Multiple SSO Providers
 
-	VirtualClusterProDistroCentralizedAdmissionControl FeatureName = "vcp-distro-centralized-admission-control" // Centralized Admission Control
+	DevsyDistroCentralizedAdmissionControl FeatureName = "devsy-distro-centralized-admission-control" // Centralized Admission Control
 
-	VirtualClusterProDistroFips FeatureName = "vcp-distro-fips" // FIPS
+	DevsyDistroFips FeatureName = "devsy-distro-fips" // FIPS
 
 	VNodeRuntime FeatureName = "vnode-runtime" // vNode Runtime
 
@@ -96,13 +96,13 @@ const (
 
 	ArgoIntegration FeatureName = "argo-integration" // Argo Integration
 
-	VirtualClusterProDistroIntegrationsKubeVirt FeatureName = "vcp-distro-integrations-kube-virt" // KubeVirt Integration
+	DevsyDistroIntegrationsKubeVirt FeatureName = "devsy-distro-integrations-kube-virt" // KubeVirt Integration
 
 	VaultIntegration FeatureName = "vault-integration" // HashiCorp Vault Integration
 
-	VirtualClusterProDistroIntegrationsExternalSecrets FeatureName = "vcp-distro-integrations-external-secrets" // External Secrets Integration
+	DevsyDistroIntegrationsExternalSecrets FeatureName = "devsy-distro-integrations-external-secrets" // External Secrets Integration
 
-	VirtualClusterProDistroIntegrationsCertManager FeatureName = "vcp-distro-integrations-cert-manager" // Cert Manager Integration
+	DevsyDistroIntegrationsCertManager FeatureName = "devsy-distro-integrations-cert-manager" // Cert Manager Integration
 
 	IstioIntegration FeatureName = "istio-integration" // Istio Integration
 
@@ -116,17 +116,17 @@ const (
 
 	AutoNodesMetal3 FeatureName = "auto-nodes-metal3" // Metal3 Node Provider
 
-	VirtualClusterProDistroGenericSync FeatureName = "vcp-distro-generic-sync" // Generic Sync
+	DevsyDistroGenericSync FeatureName = "devsy-distro-generic-sync" // Generic Sync
 
-	VirtualClusterProDistroSyncPatches FeatureName = "vcp-distro-sync-patches" // Sync Patches
+	DevsyDistroSyncPatches FeatureName = "devsy-distro-sync-patches" // Sync Patches
 
-	VirtualClusterProDistroTranslatePatches FeatureName = "vcp-distro-translate-patches" // Translate Patches
+	DevsyDistroTranslatePatches FeatureName = "devsy-distro-translate-patches" // Translate Patches
 
 	NamespaceSleepMode FeatureName = "namespace-sleep-mode" // Sleep Mode for Namespaces
 
-	VirtualClusterSleepMode FeatureName = "vcluster-sleep-mode" // Sleep Mode for Virtual Clusters
+	DevsySleepMode FeatureName = "devsy-sleep-mode" // Sleep Mode for Virtual Clusters
 
-	VirtualClusterProDistroSleepMode FeatureName = "vcp-distro-sleep-mode" // SleepMode
+	DevsyDistroSleepMode FeatureName = "devsy-distro-sleep-mode" // SleepMode
 
 	DisablePlatformDB FeatureName = "disable-platform-db" // Disable Platform Database
 
@@ -134,7 +134,7 @@ const (
 
 	AutoIngressAuth FeatureName = "auto-ingress-authentication" // Automatic Auth For Ingresses
 
-	VirtualClusterEnterprisePlugins FeatureName = "vcluster-enterprise-plugins" // Enterprise Plugins
+	DevsyEnterprisePlugins FeatureName = "devsy-enterprise-plugins" // Enterprise Plugins
 
 	RancherIntegration FeatureName = "rancher-integration" // Rancher Integration
 
@@ -142,9 +142,9 @@ const (
 
 	SecretEncryption FeatureName = "secret-encryption" // Secrets Encryption
 
-	VirtualClusterProDistroAdmissionControl FeatureName = "vcp-distro-admission-control" // Virtual Admission Control
+	DevsyDistroAdmissionControl FeatureName = "devsy-distro-admission-control" // Virtual Admission Control
 
-	VirtualClusterProDistroIsolatedControlPlane FeatureName = "vcp-distro-isolated-cp" // Isolated Control Plane
+	DevsyDistroIsolatedControlPlane FeatureName = "devsy-distro-isolated-cp" // Isolated Control Plane
 
 	Devpod FeatureName = "devpod" // Dev Environment Management
 
@@ -159,23 +159,23 @@ func GetFeatures() []FeatureName {
 		Apps,
 		Namespaces,
 		OIDCProvider,
-		VirtualCluster,
-		VirtualClusterProDistroImage,
-		VirtualClusterProDistroBuiltInCoreDNS,
+		DevsyClusters,
+		DevsyDistroImage,
+		DevsyDistroBuiltInCoreDNS,
 		PrivateNodesVpn,
-		VirtualClusterProDistroPrivateNodes,
+		DevsyDistroPrivateNodes,
 		PrivateNodesAutoNodes,
 		Standalone,
-		VirtualClusterProDistroEmbeddedEtcd,
-		VirtualClusterProDistroExternalDatabase,
+		DevsyDistroEmbeddedEtcd,
+		DevsyDistroExternalDatabase,
 		ExternalDatabaseRdsIam,
 		ConnectorExternalDatabase,
 		ConnectorExternalDatabaseEksPodIdentity,
-		VirtualClusterHostPathMapper,
+		DevsyHostPathMapper,
 		SyncNamespacesTohost,
 		ResolveDns,
 		HybridScheduling,
-		VirtualClusterProxyResources,
+		DevsyProxyResources,
 		DraSync,
 		TemplateVersioning,
 		HighAvailabilityMode,
@@ -191,38 +191,38 @@ func GetFeatures() []FeatureName {
 		AuditLogging,
 		SSOAuth,
 		MultipleSSOProviders,
-		VirtualClusterProDistroCentralizedAdmissionControl,
-		VirtualClusterProDistroFips,
+		DevsyDistroCentralizedAdmissionControl,
+		DevsyDistroFips,
 		VNodeRuntime,
 		Netris,
 		KubeVip,
 		Metal3,
 		ArgoIntegration,
-		VirtualClusterProDistroIntegrationsKubeVirt,
+		DevsyDistroIntegrationsKubeVirt,
 		VaultIntegration,
-		VirtualClusterProDistroIntegrationsExternalSecrets,
-		VirtualClusterProDistroIntegrationsCertManager,
+		DevsyDistroIntegrationsExternalSecrets,
+		DevsyDistroIntegrationsCertManager,
 		IstioIntegration,
 		AutoNodesBcm,
 		AutoNodesKubevirt,
 		AutoNodesTerraform,
 		AutoNodesClusterapi,
 		AutoNodesMetal3,
-		VirtualClusterProDistroGenericSync,
-		VirtualClusterProDistroSyncPatches,
-		VirtualClusterProDistroTranslatePatches,
+		DevsyDistroGenericSync,
+		DevsyDistroSyncPatches,
+		DevsyDistroTranslatePatches,
 		NamespaceSleepMode,
-		VirtualClusterSleepMode,
-		VirtualClusterProDistroSleepMode,
+		DevsySleepMode,
+		DevsyDistroSleepMode,
 		DisablePlatformDB,
 		PlatformExternalDB,
 		AutoIngressAuth,
-		VirtualClusterEnterprisePlugins,
+		DevsyEnterprisePlugins,
 		RancherIntegration,
 		MultiRegionMode,
 		SecretEncryption,
-		VirtualClusterProDistroAdmissionControl,
-		VirtualClusterProDistroIsolatedControlPlane,
+		DevsyDistroAdmissionControl,
+		DevsyDistroIsolatedControlPlane,
 		Devpod,
 	}
 }
@@ -266,27 +266,27 @@ func GetAllFeatures() []*Feature {
 		},
 		{
 			DisplayName: "Virtual Cluster Management",
-			Name:        "vclusters",
-			Module:      "vcluster",
+			Name:        "devsy-clusters",
+			Module:      "devsy",
 		},
 		{
-			DisplayName: "Security-Hardened vCluster Image",
-			Name:        "vcp-distro-image",
-			Module:      "vcluster",
+			DisplayName: "Security-Hardened Devsy Image",
+			Name:        "devsy-distro-image",
+			Module:      "devsy",
 		},
 		{
 			DisplayName: "Built-In CoreDNS",
-			Name:        "vcp-distro-built-in-coredns",
-			Module:      "vcluster",
+			Name:        "devsy-distro-built-in-coredns",
+			Module:      "devsy",
 		},
 		{
 			DisplayName: "Private Nodes VPN",
 			Name:        "private-nodes-vpn",
-			Module:      "vcluster",
+			Module:      "devsy",
 		},
 		{
 			DisplayName: "Private Nodes",
-			Name:        "vcp-distro-private-nodes",
+			Name:        "devsy-distro-private-nodes",
 			Module:      "tenancy-models",
 		},
 		{
@@ -301,12 +301,12 @@ func GetAllFeatures() []*Feature {
 		},
 		{
 			DisplayName: "Embedded etcd",
-			Name:        "vcp-distro-embedded-etcd",
+			Name:        "devsy-distro-embedded-etcd",
 			Module:      "backing-stores",
 		},
 		{
 			DisplayName: "External Database",
-			Name:        "vcp-distro-external-database",
+			Name:        "devsy-distro-external-database",
 			Module:      "backing-stores",
 		},
 		{
@@ -326,7 +326,7 @@ func GetAllFeatures() []*Feature {
 		},
 		{
 			DisplayName: "Central HostPath Mapper",
-			Name:        "vcluster-host-path-mapper",
+			Name:        "devsy-host-path-mapper",
 			Module:      "syncing",
 		},
 		{
@@ -345,8 +345,8 @@ func GetAllFeatures() []*Feature {
 			Module:      "syncing",
 		},
 		{
-			DisplayName: "vCluster Proxy Resources",
-			Name:        "vcluster-proxy-resources",
+			DisplayName: "Devsy Proxy Resources",
+			Name:        "devsy-proxy-resources",
 			Module:      "syncing",
 		},
 		{
@@ -426,12 +426,12 @@ func GetAllFeatures() []*Feature {
 		},
 		{
 			DisplayName: "Centralized Admission Control",
-			Name:        "vcp-distro-centralized-admission-control",
+			Name:        "devsy-distro-centralized-admission-control",
 			Module:      "security",
 		},
 		{
 			DisplayName: "FIPS",
-			Name:        "vcp-distro-fips",
+			Name:        "devsy-distro-fips",
 			Module:      "security",
 		},
 		{
@@ -461,7 +461,7 @@ func GetAllFeatures() []*Feature {
 		},
 		{
 			DisplayName: "KubeVirt Integration",
-			Name:        "vcp-distro-integrations-kube-virt",
+			Name:        "devsy-distro-integrations-kube-virt",
 			Module:      "integrations",
 		},
 		{
@@ -471,12 +471,12 @@ func GetAllFeatures() []*Feature {
 		},
 		{
 			DisplayName: "External Secrets Integration",
-			Name:        "vcp-distro-integrations-external-secrets",
+			Name:        "devsy-distro-integrations-external-secrets",
 			Module:      "integrations",
 		},
 		{
 			DisplayName: "Cert Manager Integration",
-			Name:        "vcp-distro-integrations-cert-manager",
+			Name:        "devsy-distro-integrations-cert-manager",
 			Module:      "integrations",
 		},
 		{
@@ -511,17 +511,17 @@ func GetAllFeatures() []*Feature {
 		},
 		{
 			DisplayName: "Generic Sync",
-			Name:        "vcp-distro-generic-sync",
+			Name:        "devsy-distro-generic-sync",
 			Module:      "syncing",
 		},
 		{
 			DisplayName: "Sync Patches",
-			Name:        "vcp-distro-sync-patches",
+			Name:        "devsy-distro-sync-patches",
 			Module:      "syncing",
 		},
 		{
 			DisplayName: "Translate Patches",
-			Name:        "vcp-distro-translate-patches",
+			Name:        "devsy-distro-translate-patches",
 			Module:      "syncing",
 		},
 		{
@@ -531,12 +531,12 @@ func GetAllFeatures() []*Feature {
 		},
 		{
 			DisplayName: "Sleep Mode for Virtual Clusters",
-			Name:        "vcluster-sleep-mode",
+			Name:        "devsy-sleep-mode",
 			Module:      "cost",
 		},
 		{
 			DisplayName: "SleepMode",
-			Name:        "vcp-distro-sleep-mode",
+			Name:        "devsy-distro-sleep-mode",
 			Module:      "cost",
 		},
 		{
@@ -556,7 +556,7 @@ func GetAllFeatures() []*Feature {
 		},
 		{
 			DisplayName: "Enterprise Plugins",
-			Name:        "vcluster-enterprise-plugins",
+			Name:        "devsy-enterprise-plugins",
 			Module:      "virtual-clusters",
 		},
 		{
@@ -576,13 +576,13 @@ func GetAllFeatures() []*Feature {
 		},
 		{
 			DisplayName: "Virtual Admission Control",
-			Name:        "vcp-distro-admission-control",
-			Module:      "vcluster-pro-distro",
+			Name:        "devsy-distro-admission-control",
+			Module:      "devsy-pro-distro",
 		},
 		{
 			DisplayName: "Isolated Control Plane",
-			Name:        "vcp-distro-isolated-cp",
-			Module:      "vcluster-pro-distro",
+			Name:        "devsy-distro-isolated-cp",
+			Module:      "devsy-pro-distro",
 		},
 		{
 			DisplayName: "Dev Environment Management",

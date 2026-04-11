@@ -90,13 +90,10 @@ var (
 	// assumes every hyphen delimited string should stay the same but with
 	// the leading letter capitalized, e.g. custom-storage-driver, will be
 	// CustomStorageDriver. Any exceptions to the aforementioned assumption
-	// should be mapped here, e.g. vcluster-auth-sso can become VirtualClusterAuthSSO
-	// by adding the mapping `"vcluster": "VirtualCluster"` and `"sso": "SSO"`.
+	// should be mapped here, e.g. devsy-auth-sso can become DevsyAuthSSO
+	// by adding the mapping `"sso": "SSO"`.
 	aliasLookup = map[string]string{
 		"authentication": "Auth",
-		"vcp":            "VirtualClusterPro",
-		"vclusters":      "VirtualCluster",
-		"vcluster":       "VirtualCluster",
 		"vnode":          "VNode",
 		"ui":             "UI",
 		"sso":            "SSO",
@@ -185,7 +182,7 @@ func generateModulesYaml(features []*licenseapi.Feature, modulesDef []*licenseap
 	for _, feature := range features {
 		moduleName := feature.Module
 		if moduleName == "" {
-			moduleName = "vcluster-pro-distro"
+			moduleName = "devsy-pro-distro"
 		}
 
 		if _, ok := modulesMap[moduleName]; !ok {

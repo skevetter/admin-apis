@@ -196,6 +196,6 @@ func (in UsageDataDetails) OpenAPIModelName() string {
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
-func (in VirtualClusterInfo) OpenAPIModelName() string {
-	return "com.github.skevetter.admin-apis.pkg.licenseapi.VirtualClusterInfo"
+func (in DevsyClusterInfo) OpenAPIModelName() string {
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.DevsyClusterInfo"
 }

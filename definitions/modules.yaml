@@ -15,8 +15,8 @@ modules:
     displayName: "Integrations"
   - name: "tenancy-models"
     displayName: "Tenancy Models"
-  - name: "vcluster"
-    displayName: "vCluster"
+  - name: "devsy"
+    displayName: "Devsy"
     limits:
       - name: virtual-cluster-instance
         displayName: "Virtual Clusters"
@@ -27,7 +27,7 @@ modules:
       - name: cpu
         displayName: "Attached CPUs"
   - name: "platform"
-    displayName: "vCluster Platform"
+    displayName: "Devsy Platform"
     limits:
       - name: instance
         displayName: "Instances"
@@ -45,8 +45,8 @@ modules:
 # DEPRECATED
   - name: "virtual-clusters"
     displayName: "Virtual Clusters"
-  - name: "vcluster-pro-distro"
-    displayName: "vCluster Pro Distro"
+  - name: "devsy-pro-distro"
+    displayName: "Devsy Pro Distro"
   - name: "kubernetes-clusters"
     displayName: "Kubernetes Clusters"
   - name: "templating-gitops"

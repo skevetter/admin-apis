@@ -36,17 +36,17 @@ const (
 // Products
 const (
 	/* NEVER CHANGE ANY OF THESE */
-	Devsy       ProductName = "devsy"
-	VClusterPro ProductName = "vcluster-pro"
-	DevPodPro   ProductName = "devpod-pro"
+	Devsy     ProductName = "devsy"
+	DevsyPro  ProductName = "devsy-pro"
+	DevPodPro ProductName = "devpod-pro"
 )
 
 // Modules
 const (
 	KubernetesNamespaceModule ModuleName = "k8s-namespaces"
 	KubernetesClusterModule   ModuleName = "k8s-clusters"
-	VirtualClusterModule      ModuleName = "vclusters"
-	VClusterProDistroModule   ModuleName = "vcluster-pro-distro"
+	DevsyModule               ModuleName = "devsy"
+	DevsyProDistroModule      ModuleName = "devsy-pro-distro"
 	DevPodModule              ModuleName = "devpod"
 	AuthModule                ModuleName = "auth"
 	TemplatingModule          ModuleName = "templating"
@@ -78,13 +78,13 @@ const (
 // Resources (e.g. for limits)
 const (
 	/* NEVER CHANGE ANY OF THESE */
-	ConnectedClusterLimit         ResourceName = "connected-cluster"
-	VirtualClusterInstanceLimit   ResourceName = "virtual-cluster-instance"
-	VirtualClusterInstanceHALimit ResourceName = "virtual-cluster-instance-ha"
-	SpaceInstanceLimit            ResourceName = "space-instance"
-	DevPodWorkspaceInstanceLimit  ResourceName = "devpod-workspace-instance"
-	UserLimit                     ResourceName = "user"
-	InstanceLimit                 ResourceName = "instance"
+	ConnectedClusterLimit        ResourceName = "connected-cluster"
+	DevsyClusterInstanceLimit    ResourceName = "virtual-cluster-instance"
+	DevsyClusterInstanceHALimit  ResourceName = "virtual-cluster-instance-ha"
+	SpaceInstanceLimit           ResourceName = "space-instance"
+	DevPodWorkspaceInstanceLimit ResourceName = "devpod-workspace-instance"
+	UserLimit                    ResourceName = "user"
+	InstanceLimit                ResourceName = "instance"
 )
 
 // Resource Status
