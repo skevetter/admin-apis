@@ -35,29 +35,68 @@ func EnsureFeatures(
 	}
 
 	if !isLimit {
-		if err = EnsureAttachAll(stripeClient, syncedFeatures, additionalAttachAllProducts); err != nil {
+		if err = EnsureAttachAll(
+			stripeClient,
+			syncedFeatures,
+			additionalAttachAllProducts,
+		); err != nil {
 			return err
 		}
 	}
 	return nil
 }
 
-func EnsureStripeFeatures(stripeClient *stripeclient.API, syncedFeatures map[string]SyncedFeature, features []*licenseapi.Feature, isLimit bool) error {
+func EnsureStripeFeatures(
+	stripeClient *stripeclient.API,
+	syncedFeatures map[string]SyncedFeature,
+	features []*licenseapi.Feature,
+	isLimit bool,
+) error {
 	for _, f := range features {
-		err := EnsureFeatureExists(stripeClient, syncedFeatures, f.Name, f.DisplayName, BuildMetadata(f, isLimit, nil))
+		err := EnsureFeatureExists(
+			stripeClient,
+			syncedFeatures,
+			f.Name,
+			f.DisplayName,
+			BuildMetadata(f, isLimit, nil),
+		)
 		if err != nil {
 			return err
 		}
 
 		if f.Preview {
-			err = EnsureFeatureExists(stripeClient, syncedFeatures, f.Name+"-preview", f.DisplayName+" [Preview]", BuildMetadata(f, isLimit, map[string]string{licenseapi.MetadataKeyFeatureIsPreview: licenseapi.MetadataValueTrue}))
+			err = EnsureFeatureExists(
+				stripeClient,
+				syncedFeatures,
+				f.Name+"-preview",
+				f.DisplayName+" [Preview]",
+				BuildMetadata(
+					f,
+					isLimit,
+					map[string]string{
+						licenseapi.MetadataKeyFeatureIsPreview: licenseapi.MetadataValueTrue,
+					},
+				),
+			)
 			if err != nil {
 				return err
 			}
 		}
 
 		if isLimit {
-			err = EnsureFeatureExists(stripeClient, syncedFeatures, f.Name+"-active", f.DisplayName+" [Active]", BuildMetadata(f, isLimit, map[string]string{licenseapi.MetadataKeyFeatureLimitTypeActive: licenseapi.MetadataValueTrue}))
+			err = EnsureFeatureExists(
+				stripeClient,
+				syncedFeatures,
+				f.Name+"-active",
+				f.DisplayName+" [Active]",
+				BuildMetadata(
+					f,
+					isLimit,
+					map[string]string{
+						licenseapi.MetadataKeyFeatureLimitTypeActive: licenseapi.MetadataValueTrue,
+					},
+				),
+			)
 			if err != nil {
 				return err
 			}
@@ -66,7 +105,11 @@ func EnsureStripeFeatures(stripeClient *stripeclient.API, syncedFeatures map[str
 	return nil
 }
 
-func BuildMetadata(feature *licenseapi.Feature, isLimit bool, extraMetadata map[string]string) map[string]string {
+func BuildMetadata(
+	feature *licenseapi.Feature,
+	isLimit bool,
+	extraMetadata map[string]string,
+) map[string]string {
 	metadata := map[string]string{}
 	if isLimit {
 		metadata[licenseapi.MetadataKeyFeatureIsLimit] = licenseapi.MetadataValueTrue
@@ -84,7 +127,12 @@ func BuildMetadata(feature *licenseapi.Feature, isLimit bool, extraMetadata map[
 	return metadata
 }
 
-func EnsureFeatureExists(stripeClient *stripeclient.API, syncedFeatures map[string]SyncedFeature, name, displayName string, extraMetadata map[string]string) error {
+func EnsureFeatureExists(
+	stripeClient *stripeclient.API,
+	syncedFeatures map[string]SyncedFeature,
+	name, displayName string,
+	extraMetadata map[string]string,
+) error {
 	feat, err := FindFeature(stripeClient, name)
 	if err != nil {
 		return err
@@ -106,7 +154,11 @@ func EnsureFeatureExists(stripeClient *stripeclient.API, syncedFeatures map[stri
 
 	feature, err := stripeClient.EntitlementsFeatures.New(&params)
 	if err != nil {
-		return fmt.Errorf("failed to create Stripe feature from feature %s: %v\n", *params.LookupKey, err)
+		return fmt.Errorf(
+			"failed to create Stripe feature from feature %s: %v\n",
+			*params.LookupKey,
+			err,
+		)
 	}
 	syncedFeatures[feature.ID] = SyncedFeature{
 		Feature: feature,
@@ -119,7 +171,11 @@ func FindFeature(stripeClient *stripeclient.API, id string) (*SyncedFeature, err
 		LookupKey: &id,
 	})
 	if err := list.Err(); err != nil {
-		return nil, fmt.Errorf("failed to list features while check if feature [%s] exists: %w", id, err)
+		return nil, fmt.Errorf(
+			"failed to list features while check if feature [%s] exists: %w",
+			id,
+			err,
+		)
 	}
 	if !list.Next() {
 		return nil, nil
@@ -134,7 +190,10 @@ func FindFeature(stripeClient *stripeclient.API, id string) (*SyncedFeature, err
 	return feat, nil
 }
 
-func EnsureFeatureProducts(stripeClient *stripeclient.API, syncedFeatures map[string]SyncedFeature) error {
+func EnsureFeatureProducts(
+	stripeClient *stripeclient.API,
+	syncedFeatures map[string]SyncedFeature,
+) error {
 	for key, feature := range syncedFeatures {
 		if feature.Product != nil {
 			continue
@@ -150,10 +209,17 @@ func EnsureFeatureProducts(stripeClient *stripeclient.API, syncedFeatures map[st
 	return nil
 }
 
-func EnsureFeatureProduct(stripeClient *stripeclient.API, syncedFeature *SyncedFeature) (*stripe.Product, error) {
+func EnsureFeatureProduct(
+	stripeClient *stripeclient.API,
+	syncedFeature *SyncedFeature,
+) (*stripe.Product, error) {
 	productSearch := stripeClient.Products.Search(&stripe.ProductSearchParams{
 		SearchParams: stripe.SearchParams{
-			Query: fmt.Sprintf(metadataQueryFmt, licenseapi.MetadataKeyProductForFeature, syncedFeature.Feature.LookupKey),
+			Query: fmt.Sprintf(
+				metadataQueryFmt,
+				licenseapi.MetadataKeyProductForFeature,
+				syncedFeature.Feature.LookupKey,
+			),
 		},
 	})
 	if err := productSearch.Err(); err != nil {
@@ -206,7 +272,11 @@ func EnsureAttachAll(
 	}
 	productSearch := stripeClient.Products.Search(&stripe.ProductSearchParams{
 		SearchParams: stripe.SearchParams{
-			Query: fmt.Sprintf(metadataQueryFmt, licenseapi.MetadataKeyAttachAll, licenseapi.MetadataValueTrue),
+			Query: fmt.Sprintf(
+				metadataQueryFmt,
+				licenseapi.MetadataKeyAttachAll,
+				licenseapi.MetadataValueTrue,
+			),
 		},
 	})
 	if err := productSearch.Err(); err != nil {
@@ -247,7 +317,11 @@ func EnsureAttachAll(
 	return nil
 }
 
-func SearchProductForFeatures(stripeClient *stripeclient.API, productID string, featuresToCheck map[string]SyncedFeature) error {
+func SearchProductForFeatures(
+	stripeClient *stripeclient.API,
+	productID string,
+	featuresToCheck map[string]SyncedFeature,
+) error {
 	productFeaturesList := stripeClient.ProductFeatures.List(&stripe.ProductFeatureListParams{
 		Product: &productID,
 	})
@@ -259,5 +333,3 @@ func SearchProductForFeatures(stripeClient *stripeclient.API, productID string, 
 	}
 	return nil
 }
-
-

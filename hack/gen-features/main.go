@@ -134,7 +134,12 @@ func main() {
 		panic(err)
 	}
 
-	_, err = f.WriteString(fmt.Sprintf(featuresFileTemplate, generateFeatureConstantsBody(features), generateFeatureSliceBody(features), generateAllFeatures(features)))
+	_, err = fmt.Fprintf(f,
+
+		featuresFileTemplate,
+		generateFeatureConstantsBody(features),
+		generateFeatureSliceBody(features),
+		generateAllFeatures(features))
 	if err != nil {
 		panic(err)
 	}
@@ -145,7 +150,8 @@ func main() {
 	}
 
 	allowBeforeMap, AllowBeforeList := generateFeatureAllowedBeforeMap(features)
-	_, err = f.WriteString(fmt.Sprintf(featuresAllowedBeforeFileTemplate, allowBeforeMap, AllowBeforeList))
+	_, err = fmt.Fprintf(f,
+		featuresAllowedBeforeFileTemplate, allowBeforeMap, AllowBeforeList)
 	if err != nil {
 		panic(err)
 	}
@@ -213,27 +219,42 @@ func generateModulesYaml(features []*licenseapi.Feature, modulesDef []*licenseap
 		return err
 	}
 
-	err = os.MkdirAll("../../definitions/generated", 0755)
+	err = os.MkdirAll("../../definitions/generated", 0o755)
 	if err != nil {
 		return err
 	}
 
-	return os.WriteFile("../../definitions/generated/modules_generated.yaml", append([]byte(header), bytes...), 0644)
+	return os.WriteFile(
+		"../../definitions/generated/modules_generated.yaml",
+		append([]byte(header), bytes...),
+		0o644,
+	)
 }
 
 func generateFeatureAllowedBeforeMap(features []*licenseapi.Feature) (string, string) {
-	var featureAllowBeforeMap string
-	var featureAllowedBeforeList string
+	var featureAllowBeforeMap strings.Builder
+	var featureAllowedBeforeList strings.Builder
 	for _, feature := range features {
 		if feature.AllowBefore != "" {
 			if _, err := time.Parse(time.RFC3339, feature.AllowBefore); err != nil {
 				panic(err)
 			}
-			featureAllowBeforeMap += fmt.Sprintf("\t%s: %q,\n", hyphenatedToCamelCase(replaceAliasWithFull(feature.Name)), feature.AllowBefore)
-			featureAllowedBeforeList += fmt.Sprintf("\t\t%s,\n", hyphenatedToCamelCase(replaceAliasWithFull(feature.Name)))
+			fmt.Fprintf(&featureAllowBeforeMap, "\t%s: %q,\n",
+				hyphenatedToCamelCase(replaceAliasWithFull(feature.Name)),
+				feature.AllowBefore)
+			featureAllowedBeforeList.WriteString(fmt.Sprintf(
+				"\t\t%s,\n",
+				hyphenatedToCamelCase(replaceAliasWithFull(feature.Name)),
+			))
 		}
 	}
-	return strings.TrimSuffix(featureAllowBeforeMap, "\n"), strings.TrimSuffix(featureAllowedBeforeList, "\n")
+	return strings.TrimSuffix(
+			featureAllowBeforeMap.String(),
+			"\n",
+		), strings.TrimSuffix(
+			featureAllowedBeforeList.String(),
+			"\n",
+		)
 }
 
 func generateFeatureConstantsBody(features []*licenseapi.Feature) string {
@@ -289,6 +310,8 @@ func generateAllFeatures(features []*licenseapi.Feature) string {
 
 func hyphenatedToCamelCase(name string) string {
 	return reg.ReplaceAllStringFunc(name, func(s string) string {
-		return strings.ToUpper(string(strings.TrimPrefix(s, "-")[0])) + strings.TrimPrefix(s, "-")[1:]
+		return strings.ToUpper(
+			string(strings.TrimPrefix(s, "-")[0]),
+		) + strings.TrimPrefix(s, "-")[1:]
 	})
 }

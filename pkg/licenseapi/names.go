@@ -1,16 +1,18 @@
 package licenseapi
 
-type ProductName string
-type ModuleName string
-type PlanStatus string
-type PlanInterval string
-type TierMode string
-type ResourceName string
-type ResourceStatus string
-type TrialStatus string
-type FeatureStatus string
-type FeatureName string
-type ButtonName string
+type (
+	ProductName    string
+	ModuleName     string
+	PlanStatus     string
+	PlanInterval   string
+	TierMode       string
+	ResourceName   string
+	ResourceStatus string
+	TrialStatus    string
+	FeatureStatus  string
+	FeatureName    string
+	ButtonName     string
+)
 
 // Metadata Keys
 const (
