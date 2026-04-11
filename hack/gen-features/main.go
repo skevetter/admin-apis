@@ -9,8 +9,8 @@ import (
 	"time"
 
 	"github.com/ghodss/yaml"
-	"github.com/loft-sh/admin-apis/hack/internal/yamlparser"
-	"github.com/loft-sh/admin-apis/pkg/licenseapi"
+	"github.com/skevetter/admin-apis/hack/internal/yamlparser"
+	"github.com/skevetter/admin-apis/pkg/licenseapi"
 )
 
 const (

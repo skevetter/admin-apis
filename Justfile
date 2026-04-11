@@ -19,11 +19,11 @@ gen:
   go generate ./...
   go run k8s.io/kube-openapi/cmd/openapi-gen@v0.0.0-20260127142750-a19766b6e2d4 \
     --go-header-file ./hack/boilerplate.go.txt \
-    --output-pkg github.com/loft-sh/admin-apis/pkg/licenseapi \
+    --output-pkg github.com/skevetter/admin-apis/pkg/licenseapi \
     --output-dir ./pkg/licenseapi \
     --output-file zz_generated.openapi.go \
     --output-model-name-file zz_generated.model_name.go \
-    github.com/loft-sh/admin-apis/pkg/licenseapi
+    github.com/skevetter/admin-apis/pkg/licenseapi
 
 upload-ci-local:
   act workflow_dispatch -v -W .github/workflows/upload.yaml -s STRIPE_API_KEY=$STRIPE_API_KEY
