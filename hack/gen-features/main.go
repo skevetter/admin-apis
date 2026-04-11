@@ -8,9 +8,9 @@ import (
 	"strings"
 	"time"
 
-	"sigs.k8s.io/yaml"
 	"github.com/skevetter/admin-apis/hack/internal/yamlparser"
 	"github.com/skevetter/admin-apis/pkg/licenseapi"
+	"sigs.k8s.io/yaml"
 )
 
 const (
