@@ -56,9 +56,11 @@ func EnsureStripeFeatures(
 		err := EnsureFeatureExists(
 			stripeClient,
 			syncedFeatures,
-			f.Name,
-			f.DisplayName,
-			BuildMetadata(f, isLimit, nil),
+			EnsureFeatureParams{
+				Name:          f.Name,
+				DisplayName:   f.DisplayName,
+				ExtraMetadata: BuildMetadata(f, isLimit, nil),
+			},
 		)
 		if err != nil {
 			return err
@@ -68,15 +70,17 @@ func EnsureStripeFeatures(
 			err = EnsureFeatureExists(
 				stripeClient,
 				syncedFeatures,
-				f.Name+"-preview",
-				f.DisplayName+" [Preview]",
-				BuildMetadata(
-					f,
-					isLimit,
-					map[string]string{
-						licenseapi.MetadataKeyFeatureIsPreview: licenseapi.MetadataValueTrue,
-					},
-				),
+				EnsureFeatureParams{
+					Name:        f.Name + "-preview",
+					DisplayName: f.DisplayName + " [Preview]",
+					ExtraMetadata: BuildMetadata(
+						f,
+						isLimit,
+						map[string]string{
+							licenseapi.MetadataKeyFeatureIsPreview: licenseapi.MetadataValueTrue,
+						},
+					),
+				},
 			)
 			if err != nil {
 				return err
@@ -87,15 +91,17 @@ func EnsureStripeFeatures(
 			err = EnsureFeatureExists(
 				stripeClient,
 				syncedFeatures,
-				f.Name+"-active",
-				f.DisplayName+" [Active]",
-				BuildMetadata(
-					f,
-					isLimit,
-					map[string]string{
-						licenseapi.MetadataKeyFeatureLimitTypeActive: licenseapi.MetadataValueTrue,
-					},
-				),
+				EnsureFeatureParams{
+					Name:        f.Name + "-active",
+					DisplayName: f.DisplayName + " [Active]",
+					ExtraMetadata: BuildMetadata(
+						f,
+						isLimit,
+						map[string]string{
+							licenseapi.MetadataKeyFeatureLimitTypeActive: licenseapi.MetadataValueTrue,
+						},
+					),
+				},
 			)
 			if err != nil {
 				return err
@@ -127,12 +133,21 @@ func BuildMetadata(
 	return metadata
 }
 
+// EnsureFeatureParams holds parameters for EnsureFeatureExists.
+type EnsureFeatureParams struct {
+	Name          string
+	DisplayName   string
+	ExtraMetadata map[string]string
+}
+
 func EnsureFeatureExists(
 	stripeClient *stripeclient.API,
 	syncedFeatures map[string]SyncedFeature,
-	name, displayName string,
-	extraMetadata map[string]string,
+	params EnsureFeatureParams,
 ) error {
+	name := params.Name
+	displayName := params.DisplayName
+	extraMetadata := params.ExtraMetadata
 	feat, err := FindFeature(stripeClient, name)
 	if err != nil {
 		return err
@@ -143,20 +158,20 @@ func EnsureFeatureExists(
 		return nil
 	}
 
-	params := stripe.EntitlementsFeatureParams{
+	stripeParams := stripe.EntitlementsFeatureParams{
 		Name:      &displayName,
 		LookupKey: &name,
 	}
 
 	for key, value := range extraMetadata {
-		params.AddMetadata(key, value)
+		stripeParams.AddMetadata(key, value)
 	}
 
-	feature, err := stripeClient.EntitlementsFeatures.New(&params)
+	feature, err := stripeClient.EntitlementsFeatures.New(&stripeParams)
 	if err != nil {
 		return fmt.Errorf(
-			"failed to create Stripe feature from feature %s: %v\n",
-			*params.LookupKey,
+			"failed to create Stripe feature from feature %s: %w",
+			name,
 			err,
 		)
 	}

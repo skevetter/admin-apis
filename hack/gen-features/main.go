@@ -219,7 +219,7 @@ func generateModulesYaml(features []*licenseapi.Feature, modulesDef []*licenseap
 		return err
 	}
 
-	err = os.MkdirAll("../../definitions/generated", 0o755)
+	err = os.MkdirAll("../../definitions/generated", 0o750)
 	if err != nil {
 		return err
 	}
@@ -227,7 +227,7 @@ func generateModulesYaml(features []*licenseapi.Feature, modulesDef []*licenseap
 	return os.WriteFile(
 		"../../definitions/generated/modules_generated.yaml",
 		append([]byte(header), bytes...),
-		0o644,
+		0o600,
 	)
 }
 
@@ -242,10 +242,10 @@ func generateFeatureAllowedBeforeMap(features []*licenseapi.Feature) (string, st
 			fmt.Fprintf(&featureAllowBeforeMap, "\t%s: %q,\n",
 				hyphenatedToCamelCase(replaceAliasWithFull(feature.Name)),
 				feature.AllowBefore)
-			featureAllowedBeforeList.WriteString(fmt.Sprintf(
+			fmt.Fprintf(&featureAllowedBeforeList,
 				"\t\t%s,\n",
 				hyphenatedToCamelCase(replaceAliasWithFull(feature.Name)),
-			))
+			)
 		}
 	}
 	return strings.TrimSuffix(
