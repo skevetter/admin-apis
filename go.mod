@@ -3,9 +3,9 @@ module github.com/skevetter/admin-apis
 go 1.25
 
 require (
-	github.com/ghodss/yaml v1.0.0
 	github.com/stripe/stripe-go/v81 v81.4.0
 	k8s.io/kube-openapi v0.0.0-20260330154417-16be699c7b31
+	sigs.k8s.io/yaml v1.4.0
 )
 
 require (
@@ -27,6 +27,5 @@ require (
 	github.com/google/gnostic-models v0.7.1 // indirect
 	go.yaml.in/yaml/v3 v3.0.4 // indirect
 	google.golang.org/protobuf v1.36.11 // indirect
-	gopkg.in/yaml.v2 v2.4.0 // indirect
 	sigs.k8s.io/randfill v1.0.0 // indirect
 )

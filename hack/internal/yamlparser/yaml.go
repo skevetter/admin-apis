@@ -6,7 +6,7 @@ import (
 	"os"
 	"reflect"
 
-	"github.com/ghodss/yaml"
+	"sigs.k8s.io/yaml"
 )
 
 func ParseYAML(yamlPath string, out interface{}) error {
