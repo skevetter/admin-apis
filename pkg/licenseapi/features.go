@@ -229,7 +229,7 @@ func GetFeatures() []FeatureName {
 
 func GetAllFeatures() []*Feature {
 	return []*Feature{
- 		{
+		{
 			DisplayName: "Cluster Access",
 			Name:        "cluster-access",
 			Module:      "platform",
@@ -589,5 +589,5 @@ func GetAllFeatures() []*Feature {
 			Name:        "devpod",
 			Module:      "dev-environments",
 		},
- 	}
+	}
 }

@@ -2,8 +2,10 @@ package licenseapi
 
 import "net/http"
 
-const InstanceCreateRoute = "/instance"
-const InstanceCreateMethod = http.MethodPost
+const (
+	InstanceCreateRoute  = "/instance"
+	InstanceCreateMethod = http.MethodPost
+)
 
 // InstanceCreateInput is the required input data for "instance create" operations, that is, the
 // primary endpoint that Loft instances will hit to register to the license server as well as get
