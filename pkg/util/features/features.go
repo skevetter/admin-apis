@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"maps"
 
-	"github.com/loft-sh/admin-apis/pkg/licenseapi"
+	"github.com/skevetter/admin-apis/pkg/licenseapi"
 	stripe "github.com/stripe/stripe-go/v81"
 	stripeclient "github.com/stripe/stripe-go/v81/client"
 )

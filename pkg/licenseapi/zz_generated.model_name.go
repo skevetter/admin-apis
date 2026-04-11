@@ -7,195 +7,195 @@ package licenseapi
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in Analytics) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.Analytics"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.Analytics"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in Announcement) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.Announcement"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.Announcement"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in BlockRequest) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.BlockRequest"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.BlockRequest"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in Button) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.Button"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.Button"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in ChatAuthCreateInput) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.ChatAuthCreateInput"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.ChatAuthCreateInput"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in ChatAuthCreateOutput) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.ChatAuthCreateOutput"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.ChatAuthCreateOutput"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in DomainToken) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.DomainToken"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.DomainToken"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in Feature) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.Feature"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.Feature"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in FeatureUsage) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.FeatureUsage"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.FeatureUsage"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in GenericRequestInput) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.GenericRequestInput"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.GenericRequestInput"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in GenericRequestOutput) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.GenericRequestOutput"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.GenericRequestOutput"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in InstanceActivateInstanceInput) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.InstanceActivateInstanceInput"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.InstanceActivateInstanceInput"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in InstanceCreateInput) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.InstanceCreateInput"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.InstanceCreateInput"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in InstanceCreateOutput) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.InstanceCreateOutput"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.InstanceCreateOutput"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in InstanceSendActivationEmailInput) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.InstanceSendActivationEmailInput"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.InstanceSendActivationEmailInput"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in InstanceTokenAuth) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.InstanceTokenAuth"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.InstanceTokenAuth"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in InstanceTokenClaims) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.InstanceTokenClaims"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.InstanceTokenClaims"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in InstanceUsageInput) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.InstanceUsageInput"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.InstanceUsageInput"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in Invoice) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.Invoice"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.Invoice"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in License) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.License"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.License"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in LicenseAPIRoute) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.LicenseAPIRoute"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.LicenseAPIRoute"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in LicenseAPIRoutes) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.LicenseAPIRoutes"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.LicenseAPIRoutes"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in Limit) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.Limit"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.Limit"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in Module) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.Module"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.Module"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in NodeInfo) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.NodeInfo"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.NodeInfo"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in OfflineLicenseKeyClaims) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.OfflineLicenseKeyClaims"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.OfflineLicenseKeyClaims"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in Plan) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.Plan"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.Plan"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in PlanExpiration) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.PlanExpiration"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.PlanExpiration"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in PlanPeriod) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.PlanPeriod"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.PlanPeriod"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in PlanPrice) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.PlanPrice"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.PlanPrice"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in PlatformDatabase) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.PlatformDatabase"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.PlatformDatabase"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in PriceTier) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.PriceTier"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.PriceTier"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in Request) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.Request"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.Request"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in ResourceCount) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.ResourceCount"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.ResourceCount"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in TierResource) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.TierResource"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.TierResource"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in Trial) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.Trial"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.Trial"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in UsageData) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.UsageData"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.UsageData"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in UsageDataDetails) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.UsageDataDetails"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.UsageDataDetails"
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in VirtualClusterInfo) OpenAPIModelName() string {
-	return "com.github.loft-sh.admin-apis.pkg.licenseapi.VirtualClusterInfo"
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.VirtualClusterInfo"
 }
