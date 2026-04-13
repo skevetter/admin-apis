@@ -36,6 +36,11 @@ func (in ChatAuthCreateOutput) OpenAPIModelName() string {
 }
 
 // OpenAPIModelName returns the OpenAPI model name for this type.
+func (in DevsyClusterInfo) OpenAPIModelName() string {
+	return "com.github.skevetter.admin-apis.pkg.licenseapi.DevsyClusterInfo"
+}
+
+// OpenAPIModelName returns the OpenAPI model name for this type.
 func (in DomainToken) OpenAPIModelName() string {
 	return "com.github.skevetter.admin-apis.pkg.licenseapi.DomainToken"
 }
@@ -193,9 +198,4 @@ func (in UsageData) OpenAPIModelName() string {
 // OpenAPIModelName returns the OpenAPI model name for this type.
 func (in UsageDataDetails) OpenAPIModelName() string {
 	return "com.github.skevetter.admin-apis.pkg.licenseapi.UsageDataDetails"
-}
-
-// OpenAPIModelName returns the OpenAPI model name for this type.
-func (in DevsyClusterInfo) OpenAPIModelName() string {
-	return "com.github.skevetter.admin-apis.pkg.licenseapi.DevsyClusterInfo"
 }

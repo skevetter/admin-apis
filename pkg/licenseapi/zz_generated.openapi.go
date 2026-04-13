@@ -12,49 +12,49 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		Analytics{}.OpenAPIModelName():                        schema_loft_sh_admin_apis_pkg_licenseapi_Analytics(ref),
-		Announcement{}.OpenAPIModelName():                     schema_loft_sh_admin_apis_pkg_licenseapi_Announcement(ref),
-		BlockRequest{}.OpenAPIModelName():                     schema_loft_sh_admin_apis_pkg_licenseapi_BlockRequest(ref),
-		Button{}.OpenAPIModelName():                           schema_loft_sh_admin_apis_pkg_licenseapi_Button(ref),
-		ChatAuthCreateInput{}.OpenAPIModelName():              schema_loft_sh_admin_apis_pkg_licenseapi_ChatAuthCreateInput(ref),
-		ChatAuthCreateOutput{}.OpenAPIModelName():             schema_loft_sh_admin_apis_pkg_licenseapi_ChatAuthCreateOutput(ref),
-		DomainToken{}.OpenAPIModelName():                      schema_loft_sh_admin_apis_pkg_licenseapi_DomainToken(ref),
-		Feature{}.OpenAPIModelName():                          schema_loft_sh_admin_apis_pkg_licenseapi_Feature(ref),
-		FeatureUsage{}.OpenAPIModelName():                     schema_loft_sh_admin_apis_pkg_licenseapi_FeatureUsage(ref),
-		GenericRequestInput{}.OpenAPIModelName():              schema_loft_sh_admin_apis_pkg_licenseapi_GenericRequestInput(ref),
-		GenericRequestOutput{}.OpenAPIModelName():             schema_loft_sh_admin_apis_pkg_licenseapi_GenericRequestOutput(ref),
-		InstanceActivateInstanceInput{}.OpenAPIModelName():    schema_loft_sh_admin_apis_pkg_licenseapi_InstanceActivateInstanceInput(ref),
-		InstanceCreateInput{}.OpenAPIModelName():              schema_loft_sh_admin_apis_pkg_licenseapi_InstanceCreateInput(ref),
-		InstanceCreateOutput{}.OpenAPIModelName():             schema_loft_sh_admin_apis_pkg_licenseapi_InstanceCreateOutput(ref),
-		InstanceSendActivationEmailInput{}.OpenAPIModelName(): schema_loft_sh_admin_apis_pkg_licenseapi_InstanceSendActivationEmailInput(ref),
-		InstanceTokenAuth{}.OpenAPIModelName():                schema_loft_sh_admin_apis_pkg_licenseapi_InstanceTokenAuth(ref),
-		InstanceTokenClaims{}.OpenAPIModelName():              schema_loft_sh_admin_apis_pkg_licenseapi_InstanceTokenClaims(ref),
-		InstanceUsageInput{}.OpenAPIModelName():               schema_loft_sh_admin_apis_pkg_licenseapi_InstanceUsageInput(ref),
-		Invoice{}.OpenAPIModelName():                          schema_loft_sh_admin_apis_pkg_licenseapi_Invoice(ref),
-		License{}.OpenAPIModelName():                          schema_loft_sh_admin_apis_pkg_licenseapi_License(ref),
-		LicenseAPIRoute{}.OpenAPIModelName():                  schema_loft_sh_admin_apis_pkg_licenseapi_LicenseAPIRoute(ref),
-		LicenseAPIRoutes{}.OpenAPIModelName():                 schema_loft_sh_admin_apis_pkg_licenseapi_LicenseAPIRoutes(ref),
-		Limit{}.OpenAPIModelName():                            schema_loft_sh_admin_apis_pkg_licenseapi_Limit(ref),
-		Module{}.OpenAPIModelName():                           schema_loft_sh_admin_apis_pkg_licenseapi_Module(ref),
-		NodeInfo{}.OpenAPIModelName():                         schema_loft_sh_admin_apis_pkg_licenseapi_NodeInfo(ref),
-		OfflineLicenseKeyClaims{}.OpenAPIModelName():          schema_loft_sh_admin_apis_pkg_licenseapi_OfflineLicenseKeyClaims(ref),
-		Plan{}.OpenAPIModelName():                             schema_loft_sh_admin_apis_pkg_licenseapi_Plan(ref),
-		PlanExpiration{}.OpenAPIModelName():                   schema_loft_sh_admin_apis_pkg_licenseapi_PlanExpiration(ref),
-		PlanPeriod{}.OpenAPIModelName():                       schema_loft_sh_admin_apis_pkg_licenseapi_PlanPeriod(ref),
-		PlanPrice{}.OpenAPIModelName():                        schema_loft_sh_admin_apis_pkg_licenseapi_PlanPrice(ref),
-		PlatformDatabase{}.OpenAPIModelName():                 schema_loft_sh_admin_apis_pkg_licenseapi_PlatformDatabase(ref),
-		PriceTier{}.OpenAPIModelName():                        schema_loft_sh_admin_apis_pkg_licenseapi_PriceTier(ref),
-		Request{}.OpenAPIModelName():                          schema_loft_sh_admin_apis_pkg_licenseapi_Request(ref),
-		ResourceCount{}.OpenAPIModelName():                    schema_loft_sh_admin_apis_pkg_licenseapi_ResourceCount(ref),
-		TierResource{}.OpenAPIModelName():                     schema_loft_sh_admin_apis_pkg_licenseapi_TierResource(ref),
-		Trial{}.OpenAPIModelName():                            schema_loft_sh_admin_apis_pkg_licenseapi_Trial(ref),
-		UsageData{}.OpenAPIModelName():                        schema_loft_sh_admin_apis_pkg_licenseapi_UsageData(ref),
-		UsageDataDetails{}.OpenAPIModelName():                 schema_loft_sh_admin_apis_pkg_licenseapi_UsageDataDetails(ref),
-		DevsyClusterInfo{}.OpenAPIModelName():               schema_loft_sh_admin_apis_pkg_licenseapi_DevsyClusterInfo(ref),
+		Analytics{}.OpenAPIModelName():                        schema_skevetter_admin_apis_pkg_licenseapi_Analytics(ref),
+		Announcement{}.OpenAPIModelName():                     schema_skevetter_admin_apis_pkg_licenseapi_Announcement(ref),
+		BlockRequest{}.OpenAPIModelName():                     schema_skevetter_admin_apis_pkg_licenseapi_BlockRequest(ref),
+		Button{}.OpenAPIModelName():                           schema_skevetter_admin_apis_pkg_licenseapi_Button(ref),
+		ChatAuthCreateInput{}.OpenAPIModelName():              schema_skevetter_admin_apis_pkg_licenseapi_ChatAuthCreateInput(ref),
+		ChatAuthCreateOutput{}.OpenAPIModelName():             schema_skevetter_admin_apis_pkg_licenseapi_ChatAuthCreateOutput(ref),
+		DevsyClusterInfo{}.OpenAPIModelName():                 schema_skevetter_admin_apis_pkg_licenseapi_DevsyClusterInfo(ref),
+		DomainToken{}.OpenAPIModelName():                      schema_skevetter_admin_apis_pkg_licenseapi_DomainToken(ref),
+		Feature{}.OpenAPIModelName():                          schema_skevetter_admin_apis_pkg_licenseapi_Feature(ref),
+		FeatureUsage{}.OpenAPIModelName():                     schema_skevetter_admin_apis_pkg_licenseapi_FeatureUsage(ref),
+		GenericRequestInput{}.OpenAPIModelName():              schema_skevetter_admin_apis_pkg_licenseapi_GenericRequestInput(ref),
+		GenericRequestOutput{}.OpenAPIModelName():             schema_skevetter_admin_apis_pkg_licenseapi_GenericRequestOutput(ref),
+		InstanceActivateInstanceInput{}.OpenAPIModelName():    schema_skevetter_admin_apis_pkg_licenseapi_InstanceActivateInstanceInput(ref),
+		InstanceCreateInput{}.OpenAPIModelName():              schema_skevetter_admin_apis_pkg_licenseapi_InstanceCreateInput(ref),
+		InstanceCreateOutput{}.OpenAPIModelName():             schema_skevetter_admin_apis_pkg_licenseapi_InstanceCreateOutput(ref),
+		InstanceSendActivationEmailInput{}.OpenAPIModelName(): schema_skevetter_admin_apis_pkg_licenseapi_InstanceSendActivationEmailInput(ref),
+		InstanceTokenAuth{}.OpenAPIModelName():                schema_skevetter_admin_apis_pkg_licenseapi_InstanceTokenAuth(ref),
+		InstanceTokenClaims{}.OpenAPIModelName():              schema_skevetter_admin_apis_pkg_licenseapi_InstanceTokenClaims(ref),
+		InstanceUsageInput{}.OpenAPIModelName():               schema_skevetter_admin_apis_pkg_licenseapi_InstanceUsageInput(ref),
+		Invoice{}.OpenAPIModelName():                          schema_skevetter_admin_apis_pkg_licenseapi_Invoice(ref),
+		License{}.OpenAPIModelName():                          schema_skevetter_admin_apis_pkg_licenseapi_License(ref),
+		LicenseAPIRoute{}.OpenAPIModelName():                  schema_skevetter_admin_apis_pkg_licenseapi_LicenseAPIRoute(ref),
+		LicenseAPIRoutes{}.OpenAPIModelName():                 schema_skevetter_admin_apis_pkg_licenseapi_LicenseAPIRoutes(ref),
+		Limit{}.OpenAPIModelName():                            schema_skevetter_admin_apis_pkg_licenseapi_Limit(ref),
+		Module{}.OpenAPIModelName():                           schema_skevetter_admin_apis_pkg_licenseapi_Module(ref),
+		NodeInfo{}.OpenAPIModelName():                         schema_skevetter_admin_apis_pkg_licenseapi_NodeInfo(ref),
+		OfflineLicenseKeyClaims{}.OpenAPIModelName():          schema_skevetter_admin_apis_pkg_licenseapi_OfflineLicenseKeyClaims(ref),
+		Plan{}.OpenAPIModelName():                             schema_skevetter_admin_apis_pkg_licenseapi_Plan(ref),
+		PlanExpiration{}.OpenAPIModelName():                   schema_skevetter_admin_apis_pkg_licenseapi_PlanExpiration(ref),
+		PlanPeriod{}.OpenAPIModelName():                       schema_skevetter_admin_apis_pkg_licenseapi_PlanPeriod(ref),
+		PlanPrice{}.OpenAPIModelName():                        schema_skevetter_admin_apis_pkg_licenseapi_PlanPrice(ref),
+		PlatformDatabase{}.OpenAPIModelName():                 schema_skevetter_admin_apis_pkg_licenseapi_PlatformDatabase(ref),
+		PriceTier{}.OpenAPIModelName():                        schema_skevetter_admin_apis_pkg_licenseapi_PriceTier(ref),
+		Request{}.OpenAPIModelName():                          schema_skevetter_admin_apis_pkg_licenseapi_Request(ref),
+		ResourceCount{}.OpenAPIModelName():                    schema_skevetter_admin_apis_pkg_licenseapi_ResourceCount(ref),
+		TierResource{}.OpenAPIModelName():                     schema_skevetter_admin_apis_pkg_licenseapi_TierResource(ref),
+		Trial{}.OpenAPIModelName():                            schema_skevetter_admin_apis_pkg_licenseapi_Trial(ref),
+		UsageData{}.OpenAPIModelName():                        schema_skevetter_admin_apis_pkg_licenseapi_UsageData(ref),
+		UsageDataDetails{}.OpenAPIModelName():                 schema_skevetter_admin_apis_pkg_licenseapi_UsageDataDetails(ref),
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_Analytics(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_Analytics(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -90,7 +90,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_Analytics(ref common.ReferenceCall
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_Announcement(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_Announcement(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -139,7 +139,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_Announcement(ref common.ReferenceC
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_BlockRequest(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_BlockRequest(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -188,7 +188,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_BlockRequest(ref common.ReferenceC
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_Button(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_Button(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -231,7 +231,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_Button(ref common.ReferenceCallbac
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_ChatAuthCreateInput(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_ChatAuthCreateInput(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -240,7 +240,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_ChatAuthCreateInput(ref common.Ref
 				Properties: map[string]spec.Schema{
 					"token": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Token is the jwt token identifying the loft instance.",
+							Description: "Token is the jwt token identifying the Devsy instance.",
 							Default:     "",
 							Type:        []string{"string"},
 							Format:      "",
@@ -285,7 +285,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_ChatAuthCreateInput(ref common.Ref
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_ChatAuthCreateOutput(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_ChatAuthCreateOutput(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -304,7 +304,70 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_ChatAuthCreateOutput(ref common.Re
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_DomainToken(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_DevsyClusterInfo(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "DevsyClusterInfo holds information about a single virtual cluster",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"uid": {
+						SchemaProps: spec.SchemaProps{
+							Default: "",
+							Type:    []string{"string"},
+							Format:  "",
+						},
+					},
+					"name": {
+						SchemaProps: spec.SchemaProps{
+							Default: "",
+							Type:    []string{"string"},
+							Format:  "",
+						},
+					},
+					"namespace": {
+						SchemaProps: spec.SchemaProps{
+							Default: "",
+							Type:    []string{"string"},
+							Format:  "",
+						},
+					},
+					"creation_timestamp": {
+						SchemaProps: spec.SchemaProps{
+							Default: "",
+							Type:    []string{"string"},
+							Format:  "",
+						},
+					},
+					"is_available": {
+						SchemaProps: spec.SchemaProps{
+							Default: false,
+							Type:    []string{"boolean"},
+							Format:  "",
+						},
+					},
+					"node_machine_ids": {
+						SchemaProps: spec.SchemaProps{
+							Type: []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+				},
+				Required: []string{"uid", "name", "namespace", "creation_timestamp", "is_available", "node_machine_ids"},
+			},
+		},
+	}
+}
+
+func schema_skevetter_admin_apis_pkg_licenseapi_DomainToken(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -324,7 +387,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_DomainToken(ref common.ReferenceCa
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_Feature(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_Feature(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -380,7 +443,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_Feature(ref common.ReferenceCallba
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_FeatureUsage(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_FeatureUsage(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -408,7 +471,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_FeatureUsage(ref common.ReferenceC
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_GenericRequestInput(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_GenericRequestInput(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -417,7 +480,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_GenericRequestInput(ref common.Ref
 				Properties: map[string]spec.Schema{
 					"token": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Token is the jwt token identifying the loft instance.",
+							Description: "Token is the jwt token identifying the Devsy instance.",
 							Default:     "",
 							Type:        []string{"string"},
 							Format:      "",
@@ -452,7 +515,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_GenericRequestInput(ref common.Ref
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_GenericRequestOutput(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_GenericRequestOutput(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -495,7 +558,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_GenericRequestOutput(ref common.Re
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_InstanceActivateInstanceInput(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_InstanceActivateInstanceInput(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -515,7 +578,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_InstanceActivateInstanceInput(ref 
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_InstanceCreateInput(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_InstanceCreateInput(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -524,7 +587,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_InstanceCreateInput(ref common.Ref
 				Properties: map[string]spec.Schema{
 					"token": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Token is the jwt token identifying the loft instance.",
+							Description: "Token is the jwt token identifying the Devsy instance.",
 							Default:     "",
 							Type:        []string{"string"},
 							Format:      "",
@@ -633,7 +696,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_InstanceCreateInput(ref common.Ref
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_InstanceCreateOutput(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_InstanceCreateOutput(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -662,7 +725,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_InstanceCreateOutput(ref common.Re
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_InstanceSendActivationEmailInput(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_InstanceSendActivationEmailInput(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -682,7 +745,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_InstanceSendActivationEmailInput(r
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_InstanceTokenAuth(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_InstanceTokenAuth(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -690,7 +753,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_InstanceTokenAuth(ref common.Refer
 				Properties: map[string]spec.Schema{
 					"token": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Token is the jwt token identifying the loft instance.",
+							Description: "Token is the jwt token identifying the Devsy instance.",
 							Default:     "",
 							Type:        []string{"string"},
 							Format:      "",
@@ -711,7 +774,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_InstanceTokenAuth(ref common.Refer
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_InstanceTokenClaims(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_InstanceTokenClaims(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -740,7 +803,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_InstanceTokenClaims(ref common.Ref
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_InstanceUsageInput(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_InstanceUsageInput(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -776,7 +839,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_InstanceUsageInput(ref common.Refe
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_Invoice(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_Invoice(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -810,7 +873,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_Invoice(ref common.ReferenceCallba
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_License(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_License(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -956,7 +1019,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_License(ref common.ReferenceCallba
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_LicenseAPIRoute(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_LicenseAPIRoute(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -988,7 +1051,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_LicenseAPIRoute(ref common.Referen
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_LicenseAPIRoutes(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_LicenseAPIRoutes(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -1051,7 +1114,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_LicenseAPIRoutes(ref common.Refere
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_Limit(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_Limit(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -1093,7 +1156,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_Limit(ref common.ReferenceCallback
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_Module(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_Module(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -1153,7 +1216,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_Module(ref common.ReferenceCallbac
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_NodeInfo(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_NodeInfo(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -1196,7 +1259,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_NodeInfo(ref common.ReferenceCallb
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_OfflineLicenseKeyClaims(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_OfflineLicenseKeyClaims(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -1215,7 +1278,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_OfflineLicenseKeyClaims(ref common
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_Plan(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_Plan(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -1326,7 +1389,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_Plan(ref common.ReferenceCallback)
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_PlanExpiration(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_PlanExpiration(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -1353,7 +1416,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_PlanExpiration(ref common.Referenc
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_PlanPeriod(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_PlanPeriod(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -1380,7 +1443,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_PlanPeriod(ref common.ReferenceCal
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_PlanPrice(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_PlanPrice(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -1463,7 +1526,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_PlanPrice(ref common.ReferenceCall
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_PlatformDatabase(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_PlatformDatabase(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -1498,7 +1561,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_PlatformDatabase(ref common.Refere
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_PriceTier(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_PriceTier(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -1546,7 +1609,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_PriceTier(ref common.ReferenceCall
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_Request(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_Request(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -1588,7 +1651,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_Request(ref common.ReferenceCallba
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_ResourceCount(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_ResourceCount(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -1629,7 +1692,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_ResourceCount(ref common.Reference
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_TierResource(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_TierResource(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -1656,7 +1719,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_TierResource(ref common.ReferenceC
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_Trial(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_Trial(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -1711,7 +1774,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_Trial(ref common.ReferenceCallback
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_UsageData(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_UsageData(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -1764,7 +1827,7 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_UsageData(ref common.ReferenceCall
 	}
 }
 
-func schema_loft_sh_admin_apis_pkg_licenseapi_UsageDataDetails(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_skevetter_admin_apis_pkg_licenseapi_UsageDataDetails(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -1804,69 +1867,6 @@ func schema_loft_sh_admin_apis_pkg_licenseapi_UsageDataDetails(ref common.Refere
 			},
 		},
 		Dependencies: []string{
-			NodeInfo{}.OpenAPIModelName(), DevsyClusterInfo{}.OpenAPIModelName()},
-	}
-}
-
-func schema_loft_sh_admin_apis_pkg_licenseapi_DevsyClusterInfo(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "DevsyClusterInfo holds information about a single virtual cluster",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"uid": {
-						SchemaProps: spec.SchemaProps{
-							Default: "",
-							Type:    []string{"string"},
-							Format:  "",
-						},
-					},
-					"name": {
-						SchemaProps: spec.SchemaProps{
-							Default: "",
-							Type:    []string{"string"},
-							Format:  "",
-						},
-					},
-					"namespace": {
-						SchemaProps: spec.SchemaProps{
-							Default: "",
-							Type:    []string{"string"},
-							Format:  "",
-						},
-					},
-					"creation_timestamp": {
-						SchemaProps: spec.SchemaProps{
-							Default: "",
-							Type:    []string{"string"},
-							Format:  "",
-						},
-					},
-					"is_available": {
-						SchemaProps: spec.SchemaProps{
-							Default: false,
-							Type:    []string{"boolean"},
-							Format:  "",
-						},
-					},
-					"node_machine_ids": {
-						SchemaProps: spec.SchemaProps{
-							Type: []string{"array"},
-							Items: &spec.SchemaOrArray{
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Default: "",
-										Type:    []string{"string"},
-										Format:  "",
-									},
-								},
-							},
-						},
-					},
-				},
-				Required: []string{"uid", "name", "namespace", "creation_timestamp", "is_available", "node_machine_ids"},
-			},
-		},
+			DevsyClusterInfo{}.OpenAPIModelName(), NodeInfo{}.OpenAPIModelName()},
 	}
 }

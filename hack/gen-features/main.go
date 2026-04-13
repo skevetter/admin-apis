@@ -31,8 +31,8 @@ func GetFeatures() []FeatureName {
 
 func GetAllFeatures() []*Feature {
 	return []*Feature{
- %s
- 	}
+%s
+	}
 }
 `
 
